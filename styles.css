@@ -15,6 +15,32 @@ header {
     overflow: hidden; /* Ensure the overlay and content stay within the header */
 }
 
+.contact-details p {
+    color: #FFD700; /* Gold color for contrast */
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.contact-details i {
+    margin-right: 8px;
+    color: #FFD700;
+}
+
+.contact-details a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+.leaf-section {
+    background-color: transparent; /* No overlay */
+}
+
+
+
 /*header .overlay {
     position: absolute;
     top: 0;
@@ -197,7 +223,104 @@ h1 {
     right: 0; /* Stick to the right edge */
     top: 0; /* Align to the top */
     bottom: 0; /* Align to the bottom */
-    width: 50%; /* Adjust width as needed */
+    width: 70%; /* Adjust width as needed */
     background: green; /* Adjust background color as needed */
     border-radius: 0 0 0 50%; /* Create a curvy shape on the left edge */
+    
+}
+.floating-qr {
+    position: fixed;
+    
+    text-align: center;
+    width: 100px; /* Smaller width */
+    z-index: 1000;
+    background-color: white; /* Card background color */
+    border-radius: 8px; /* Slightly smaller rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Lighter shadow */
+    padding: 8px; /* Reduced padding */
+    transition: transform 0.3s ease-in-out;
+    aspect-ratio: 4 / 3; /* Maintain 4:3 aspect ratio */
+}
+
+.qr-1 {
+    right: 20px;
+    bottom: 50px;
+    
+}
+
+.qr-2 {
+    left: 20px;
+    bottom: 50px; /* Adjusted to prevent overlap */
+}
+
+.floating-qr img {
+    width: 100%; /* Ensure the image fits the card */
+    height: auto;
+    border-radius: 6px; /* Rounded corners for the image */
+}
+
+.floating-qr:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.floating-qr p {
+    color: black;
+    font-size: 12px; /* Smaller font size */
+    margin: 0;
+    padding: 4px;
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 6px; /* Rounded corners for the text box */
+    background-color: #f9f9f9; /* Slightly shaded background */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Light shadow */
+    font-family: 'Courier New', Courier, monospace; /* Consistent font styling */
+}
+.icon-group {
+    display: flex;
+    align-items: center;
+    border: 1.5px solid yellow;
+    border-radius: 20px;
+    padding: 5px;
+    background-color: transparent;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.icon-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0 5px;
+    text-decoration: none;
+}
+
+.icon-container img {
+    width: 30px;
+    height: 30px;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    left: 100%;
+    margin-left: 10px;
+    padding: 5px;
+    background: linear-gradient(to right, #ffcc00, #ff9999);
+    color: #fff;
+    border-radius: 5px;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+.icon-container:hover .tooltip,
+.icon-container:focus .tooltip {
+    display: block;
+}
+
+.icon-container:hover img,
+.icon-container:focus img {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
 }

@@ -104,7 +104,7 @@ nav {
 }
 
 .nav-container a:hover {
-    background-color: #666; /* Darker background on hover */
+    background-color: #fe9393; /* Darker background on hover */
     border-color: goldenrod; /* Highlight the border on hover */
 }
 
@@ -131,6 +131,8 @@ nav {
 }
 .carousel-slide iframe {
     width: 100%;
+    left:15%;
+    right:15%;
     height: 200px;
 }
 .carousel-caption {
@@ -244,13 +246,13 @@ h1 {
 
 .qr-1 {
     right: 20px;
-    bottom: 50px;
+    bottom: 45%;
     
 }
 
 .qr-2 {
-    left: 20px;
-    bottom: 50px; /* Adjusted to prevent overlap */
+    right: 20px;
+    bottom: 10%; /* Adjusted to prevent overlap */
 }
 
 .floating-qr img {
@@ -275,16 +277,16 @@ h1 {
     font-family: 'Courier New', Courier, monospace; /* Consistent font styling */
 }
 .icon-group {
-    display: flex;
+    display: inline-block;
     align-items: center;
     border: 1.5px solid yellow;
     border-radius: 20px;
     padding: 5px;
-    background-color: transparent;
+    background-color: yellow;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     position: fixed;
     left: 10px;
-    top: 50%;
+    top: 40%;
     transform: translateY(-50%);
 }
 
@@ -292,6 +294,7 @@ h1 {
     position: relative;
     display: flex;
     align-items: center;
+    padding: 5px;
     margin: 0 5px;
     text-decoration: none;
 }
